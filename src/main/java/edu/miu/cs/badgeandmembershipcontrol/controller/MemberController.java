@@ -1,7 +1,7 @@
 package edu.miu.cs.badgeandmembershipcontrol.controller;
 
 import edu.miu.cs.badgeandmembershipcontrol.domain.Member;
-import edu.miu.cs.badgeandmembershipcontrol.service.MemberService;
+import edu.miu.cs.badgeandmembershipcontrol.repository.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

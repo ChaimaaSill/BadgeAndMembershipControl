@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import edu.miu.cs.badgeandmembershipcontrol.domain.Transaction;
-import edu.miu.cs.badgeandmembershipcontrol.service.TransactionService;
+import edu.miu.cs.badgeandmembershipcontrol.repository.service.TransactionService;
 
 @RestController
 @RequiredArgsConstructor

@@ -3,7 +3,7 @@ package edu.miu.cs.badgeandmembershipcontrol.controller;
 
 import edu.miu.cs.badgeandmembershipcontrol.aspect.annotations.ExcutionTime;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Badge;
-import edu.miu.cs.badgeandmembershipcontrol.service.BadgeService;
+import edu.miu.cs.badgeandmembershipcontrol.repository.service.BadgeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.miu.cs.badgeandmembershipcontrol.domain.Plan;
-import edu.miu.cs.badgeandmembershipcontrol.service.PlanService;
+import edu.miu.cs.badgeandmembershipcontrol.repository.service.PlanService;
 
 @RestController
 @RequiredArgsConstructor

@@ -1,4 +1,4 @@
-package edu.miu.cs.badgeandmembershipcontrol.repository.service;
+package edu.miu.cs.badgeandmembershipcontrol.service;
 
 import java.util.List;
 

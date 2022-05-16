@@ -2,9 +2,8 @@ package edu.miu.cs.badgeandmembershipcontrol.controller;
 
 
 import edu.miu.cs.badgeandmembershipcontrol.domain.Membership;
-import edu.miu.cs.badgeandmembershipcontrol.service.MembershipService;
+import edu.miu.cs.badgeandmembershipcontrol.repository.service.MembershipService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

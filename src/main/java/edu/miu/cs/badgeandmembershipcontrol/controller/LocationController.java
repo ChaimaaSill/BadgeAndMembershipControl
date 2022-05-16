@@ -3,7 +3,7 @@ package edu.miu.cs.badgeandmembershipcontrol.controller;
 import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Location;
 import edu.miu.cs.badgeandmembershipcontrol.domain.LocationType;
-import edu.miu.cs.badgeandmembershipcontrol.service.LocationService;
+import edu.miu.cs.badgeandmembershipcontrol.repository.service.LocationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

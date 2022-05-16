@@ -1,9 +1,9 @@
-package edu.miu.cs.badgeandmembershipcontrol.repository.service.Impl;
+package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
 
 import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Transaction;
 import edu.miu.cs.badgeandmembershipcontrol.repository.TransactionRepository;
-import edu.miu.cs.badgeandmembershipcontrol.repository.service.TransactionService;
+import edu.miu.cs.badgeandmembershipcontrol.service.TransactionService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

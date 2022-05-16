@@ -1,8 +1,8 @@
-package edu.miu.cs.badgeandmembershipcontrol.repository.service.Impl;
+package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
 
 import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.repository.TimeSlotRepository;
-import edu.miu.cs.badgeandmembershipcontrol.repository.service.TimeSlotService;
+import edu.miu.cs.badgeandmembershipcontrol.service.TimeSlotService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

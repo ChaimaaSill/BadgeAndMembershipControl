@@ -1,10 +1,11 @@
-package edu.miu.cs.badgeandmembershipcontrol.repository.service.Impl;
+package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
 
 import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Location;
 import edu.miu.cs.badgeandmembershipcontrol.domain.LocationType;
 import edu.miu.cs.badgeandmembershipcontrol.repository.LocationRepository;
-import edu.miu.cs.badgeandmembershipcontrol.repository.service.LocationService;
+import edu.miu.cs.badgeandmembershipcontrol.service.LocationService;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,11 +30,7 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override public Location createLocation(Location location) {
-        // if the location already exists do not take it!
-        Optional<Location> optionalLocation = locationRepository.findLocationByName(location.getName());
-        if(!optionalLocation.isPresent())
-            return locationRepository.save(location);
-        return null;
+        return locationRepository.save(location);
     }
 
     @Override public Location updateLocation(Long locationId, Location location) {

@@ -1,10 +1,12 @@
-package edu.miu.cs.badgeandmembershipcontrol.repository.service.Impl;
+package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
 import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Badge;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Member;
 import edu.miu.cs.badgeandmembershipcontrol.repository.BadgeRepository;
-import edu.miu.cs.badgeandmembershipcontrol.repository.service.BadgeService;
+import edu.miu.cs.badgeandmembershipcontrol.service.BadgeService;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -12,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service

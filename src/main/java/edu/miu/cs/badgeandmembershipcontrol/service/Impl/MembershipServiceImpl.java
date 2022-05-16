@@ -1,9 +1,10 @@
-package edu.miu.cs.badgeandmembershipcontrol.repository.service.Impl;
+package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
 
 import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Membership;
 import edu.miu.cs.badgeandmembershipcontrol.repository.MembershipRepository;
-import edu.miu.cs.badgeandmembershipcontrol.repository.service.MembershipService;
+import edu.miu.cs.badgeandmembershipcontrol.service.MembershipService;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
