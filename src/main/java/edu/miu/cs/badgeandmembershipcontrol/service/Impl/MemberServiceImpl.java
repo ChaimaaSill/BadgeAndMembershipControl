@@ -1,8 +1,13 @@
 package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
 
+import com.sun.istack.NotNull;
+import edu.miu.cs.badgeandmembershipcontrol.domain.Badge;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Member;
+import edu.miu.cs.badgeandmembershipcontrol.repository.BadgeRepository;
 import edu.miu.cs.badgeandmembershipcontrol.repository.MemberRepository;
+import edu.miu.cs.badgeandmembershipcontrol.service.BadgeService;
 import edu.miu.cs.badgeandmembershipcontrol.service.MemberService;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +20,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {
 
-    private MemberRepository memberRepository;
+    @NotNull private final MemberRepository memberRepository;
+    @NotNull private final BadgeService badgeService;
 
     @Override public List<Member> getAllMembers() {
         return memberRepository.findAll();
@@ -27,7 +33,11 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override public Member createMember(Member member) {
-        return memberRepository.save(member);
+        Member member1 = memberRepository.save(member);
+        // Creates Badge with the member ID and returns the badge
+        Badge badge = badgeService.createBadge(member1);
+        member1.addBadge(badge);
+        return member1;
     }
 
     @Override public Member updateMember(Long memberId, Member member) {
@@ -47,4 +57,8 @@ public class MemberServiceImpl implements MemberService {
         return false;
     }
 
+    @Override public Badge createNewBadge(Long memberId) {
+
+        return null;
+    }
 }

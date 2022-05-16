@@ -1,11 +1,16 @@
 package edu.miu.cs.badgeandmembershipcontrol.service.Impl;
+import com.sun.istack.NotNull;
 import edu.miu.cs.badgeandmembershipcontrol.domain.Badge;
+import edu.miu.cs.badgeandmembershipcontrol.domain.Member;
 import edu.miu.cs.badgeandmembershipcontrol.repository.BadgeRepository;
 import edu.miu.cs.badgeandmembershipcontrol.service.BadgeService;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +22,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class BadgeServiceImpl implements BadgeService {
 
-    private final BadgeRepository badgeRepository;
+    @NotNull private final BadgeRepository badgeRepository;
 
     @Override public List<Badge> getAllBadges() {
         return badgeRepository.findAll();
@@ -34,6 +39,14 @@ public class BadgeServiceImpl implements BadgeService {
     }
 
     @Override public Badge createBadge(Badge badge) {
+        return badgeRepository.save(badge);
+    }
+
+    @Override public Badge createBadge(Member member) {
+        Badge badge = new Badge();
+        badge.setCreatedOn(LocalDateTime.now());
+        badge.setExpiryDate(LocalDate.from(LocalDateTime.now().plusYears(1)));
+        badge.setMember(member);
         return badgeRepository.save(badge);
     }
 
